@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 3</title>
+</head>
+<script src="palindrome.js">
+</script>
+<script>
+
+    function myFunction() {
+      alert('After 5 Seconds of Delay');
+    }
+    
+    function check(){
+        let input = document.getElementById('enter').value
+
+        if(input == '')
+            return;
+
+        let res = checkPal(input)
+
+        let text = "Entered Input " + input + " is " ;
+        if(res){
+            text += "a Palindrome"
+        }else{
+            text += "not a Palindrome"
+        }
+
+        alert(text);
+    }
+
+    </script>
+
+<body>
+
+    <div>
+        <h2>3. b) Delay Alert Box</h2>
+
+        <button onclick="setTimeout(myFunction, 5000);">Try it</button>
+
+
+    </div>
+    <div>
+        <h2>3. Palindrome + Form Validation</h2>
+
+      <form>
+          <input id="enter" class="col-xs-offset-2" type="text" value="enter number" name="name" onfocus="value=''" required><br>
+          <input style="margin-top: 0.4%;" type="submit" value="Submit" onclick="check()">
+      </form>
+    </div>
+</body>
+</html>
