@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 4 by Abhishek Mishra</title>
+    <h1>Experiment 4 by Abhishek Mishra</h1>
+  </head>
+  <script>
+      function genDate(){
 
-    <form action="display.html" method="post">
-        <input type="text" name="serialNumber" />
-        <input type="submit" value="Submit" />
-    </form>    
+      
+      let input = document.getElementById("display");
+      // program to display the date
+      // get local machine date time
+      const date = new Date();
+
+      // get the date as a string
+      const n = date.toDateString();
+
+      // get the time as a string
+      const time = date.toLocaleTimeString();
+
+      input.innerHTML = n + " " + time;
+      }
     
-</head>
-<body>
-    
-</body>
+  </script>
+  <body>
+    <div>
+      <h2>Date And Time using JS program</h2>
+      <h4 id="display">Date Here</h4>
+    </div>
+
+    <div>
+        <button type="button" onclick="genDate()">Check Date And Time</button>
+    </div>
+  </body>
 </html>
