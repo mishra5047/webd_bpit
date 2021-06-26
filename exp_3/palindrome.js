@@ -1,8 +1,3 @@
-let args = "aaaaaa"
-
-console.log(checkPal(args));
-
-
 function checkPal(string){
     let str = 0, end = string.length - 1;
     while(str < end){
@@ -14,3 +9,4 @@ function checkPal(string){
     }
     return true;
 }
+
